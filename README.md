@@ -1,2 +1,3 @@
-# .github.io
-Recruiting and Talent Acquisition Portfolio for Moncina T. James
+# Moncina T. James Recruiting Portfolio
+
+GitHub Pages portfolio website.
