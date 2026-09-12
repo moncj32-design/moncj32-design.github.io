@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recruiting and Talent Acquisition portfolio for Moncina T. James, an experienced recruiter specializing in manufacturing, skilled trades, healthcare, logistics, technical, and operational roles.">
+  <title>Moncina T. James | Talent Acquisition Portfolio</title>
+  <style>
+    :root {
+      --navy: #0f172a;
+      --navy-soft: #1e293b;
+      --teal: #0f766e;
+      --teal-dark: #115e59;
+      --teal-light: #ccfbf1;
+      --teal-wash: #edf7f5;
+      --cream: #f7f5f0;
+      --cream-soft: #fbfaf7;
+      --gold: #f5c451;
+      --gold-wash: #fbf5e8;
+      --white: #ffffff;
+      --slate: #475569;
+      --line: #dbe3e6;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+      --radius: 28px;
+      --max-width: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--navy);
+      background: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    img { display: block; width: 100%; max-width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    section { scroll-margin-top: 82px; }
+    .container { width: min(calc(100% - 40px), var(--max-width)); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--teal);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { margin-top: 0; line-height: 1.1; }
+    h1 { margin-bottom: 20px; font-size: clamp(2.55rem, 5.4vw, 4.65rem); letter-spacing: -0.055em; }
+    h2 { margin-bottom: 20px; font-size: clamp(2rem, 4vw, 3.35rem); letter-spacing: -0.04em; }
+    h3 { margin-bottom: 12px; font-size: 1.25rem; }
+    p { margin-top: 0; }
+    .lead { max-width: 690px; color: var(--slate); font-size: 1.12rem; }
+    .image-frame {
+      overflow: hidden;
+      border: 1px solid rgba(15, 118, 110, 0.15);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .image-frame img { aspect-ratio: 16 / 10.5; height: 100%; object-fit: cover; object-position: center; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+      background: rgba(247, 245, 240, 0.94);
+      backdrop-filter: blur(14px);
+    }
+    .nav-wrap { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { text-decoration: none; }
+    .brand strong { display: block; font-size: 1.05rem; }
+    .brand span { color: var(--teal); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; }
+    .desktop-nav { display: flex; align-items: center; gap: 24px; }
+    .desktop-nav a { font-size: 0.92rem; font-weight: 700; text-decoration: none; }
+    .desktop-nav a:hover, .desktop-nav a:focus-visible { color: var(--teal); }
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--navy);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .mobile-nav { display: none; border-top: 1px solid var(--line); padding: 12px 20px 18px; }
+    .mobile-nav.open { display: grid; gap: 6px; }
+    .mobile-nav a { padding: 10px 0; font-weight: 700; text-decoration: none; }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 11px 22px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+    .button:hover { transform: translateY(-1px); }
+    .button-primary { background: var(--teal); color: var(--white); }
+    .button-primary:hover { background: var(--teal-dark); }
+    .button-secondary { border-color: #cbd5e1; background: var(--white); }
+    .button-secondary:hover { border-color: var(--teal); color: var(--teal); }
+    .button-dark { background: var(--navy); color: var(--white); }
+    .hero-actions { max-width: 560px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+
+    .hero { padding: 58px 0; background: linear-gradient(135deg, var(--cream-soft), var(--teal-wash)); }
+    .hero-grid { display: grid; grid-template-columns: 1.04fr 0.96fr; align-items: center; gap: 42px; }
+    .tag {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      border: 1px solid #b9e5df;
+      border-radius: 999px;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.8);
+      color: var(--teal-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+    .hero .image-frame img { aspect-ratio: 16 / 11; max-height: 490px; }
+
+    .about { background: linear-gradient(180deg, var(--white), var(--cream-soft)); }
+    .two-column { display: grid; grid-template-columns: 0.88fr 1.12fr; align-items: center; gap: 48px; }
+    .value-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 14px; margin-top: 28px; }
+    .value-card { min-height: 132px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 20px; padding: 20px; background: var(--cream); font-weight: 800; }
+    .icon { color: var(--teal); font-size: 1.4rem; }
+
+    .expertise { background: linear-gradient(135deg, var(--cream), var(--gold-wash)); }
+    .expertise-top { display: grid; grid-template-columns: 0.8fr 1.2fr; align-items: center; gap: 42px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .chip { border: 1px solid #cbd5e1; border-radius: 999px; padding: 8px 13px; background: var(--white); font-size: 0.84rem; font-weight: 750; }
+    .role-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 22px; margin-top: 42px; }
+    .role-card { height: 100%; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; background: var(--white); box-shadow: 0 8px 28px rgba(15,23,42,0.06); }
+    .role-card ul { margin: 18px 0 0; padding: 0; list-style: none; }
+    .role-card li { position: relative; margin: 11px 0; padding-left: 24px; color: var(--slate); }
+    .role-card li::before { position: absolute; left: 0; color: var(--teal); content: "✓"; font-weight: 900; }
+
+    .workflow { background: var(--navy); color: var(--white); }
+    .workflow .eyebrow { color: #78d9ce; }
+    .workflow .lead { color: #cbd5e1; }
+    .workflow-top { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 44px; }
+    .workflow-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch; gap: 18px; margin-top: 42px; }
+    .workflow-card { min-height: 278px; display: flex; flex-direction: column; border: 1px solid #334155; border-radius: var(--radius); padding: 26px; background: rgba(30,41,59,0.78); }
+    .workflow-number { color: #78d9ce; font-size: 0.82rem; font-weight: 900; letter-spacing: 0.16em; }
+    .workflow-card h3 { min-height: 54px; margin-top: 18px; }
+    .workflow-card p { flex: 1; color: #cbd5e1; }
+    .sourcing-panel { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 34px; margin-top: 34px; border: 1px solid #334155; border-radius: var(--radius); padding: 28px; background: rgba(30,41,59,0.78); }
+    .sourcing-panel p { color: #cbd5e1; }
+
+    .experience { background: linear-gradient(180deg, var(--white), var(--teal-wash)); }
+    .timeline { margin-top: 38px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .timeline-item { display: grid; grid-template-columns: 0.35fr 0.8fr 1.65fr; gap: 28px; padding: 28px 0; }
+    .timeline-item + .timeline-item { border-top: 1px solid var(--line); }
+    .period { color: var(--teal); font-weight: 900; }
+    .role { color: var(--slate); font-size: 0.9rem; font-weight: 750; }
+    .timeline-item p { margin-bottom: 0; color: var(--slate); }
+
+    .contact-section { padding: 72px 0; background: var(--cream); }
+    .contact-card { display: grid; grid-template-columns: 1.25fr 0.75fr; align-items: center; gap: 38px; border-radius: 36px; padding: 50px; background: var(--teal); color: var(--white); box-shadow: var(--shadow); }
+    .contact-card .eyebrow { color: #ccfbf1; }
+    .contact-card p { color: #ecfeff; }
+    .contact-links { display: grid; gap: 12px; }
+    .contact-link { min-height: 54px; display: flex; align-items: center; gap: 12px; border: 1px solid rgba(255,255,255,0.44); border-radius: 17px; padding: 14px 18px; font-weight: 800; text-decoration: none; overflow-wrap: anywhere; }
+    .contact-link.light { border-color: transparent; background: var(--white); color: var(--navy); }
+    .contact-link.gold { border-color: transparent; background: var(--gold); color: var(--navy); }
+
+    footer { border-top: 1px solid var(--line); padding: 26px 20px; background: var(--cream); color: var(--slate); text-align: center; font-size: 0.86rem; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    @media (max-width: 1023px) {
+      .container { width: min(calc(100% - 64px), 820px); }
+      .section { padding: 60px 0; }
+      .hero-grid, .two-column, .expertise-top, .workflow-top, .sourcing-panel, .contact-card { grid-template-columns: 1fr; }
+      .hero-grid, .two-column, .expertise-top, .workflow-top { gap: 34px; }
+      .image-frame img { max-height: 440px; }
+      .role-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .role-grid .role-card:last-child { grid-column: 1 / -1; }
+      .workflow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .timeline-item { grid-template-columns: 0.4fr 0.9fr 1.4fr; }
+      .contact-card { padding: 38px; }
+    }
+
+    @media (max-width: 767px) {
+      .desktop-nav { display: none; }
+      .menu-button { display: inline-flex; align-items: center; justify-content: center; }
+      .container { width: min(calc(100% - 40px), 680px); }
+      .hero { padding: 42px 0; }
+      .section { padding: 48px 0; }
+      .hero-actions { grid-template-columns: 1fr; max-width: none; }
+      .value-grid, .role-grid, .workflow-grid { grid-template-columns: 1fr; }
+      .role-grid .role-card:last-child { grid-column: auto; }
+      .value-card, .workflow-card { min-height: auto; }
+      .workflow-card h3 { min-height: auto; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .contact-card { padding: 28px; border-radius: 26px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Moncina T. James portfolio home">
+        <strong>Moncina T. James</strong>
+        <span>Talent Acquisition</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#experience">Experience</a>
+        <a href="Moncina_T_James_Talent_Acquisition_Manager_Resume%209_4_26.pdf" download>Resume</a>
+        <a class="button button-dark" href="#contact">Contact Me</a>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu">☰</button>
+    </div>
+    <nav id="mobile-navigation" class="mobile-nav" aria-label="Mobile navigation">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="Moncina_T_James_Talent_Acquisition_Manager_Resume%209_4_26.pdf" download>Download My Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="tag">◆ Strategic Recruiter • Talent Partner • Sourcing Specialist</div>
+          <h1>Connecting the right talent with the right opportunity.</h1>
+          <p class="lead">Experienced talent acquisition professional specializing in technical, skilled trades, manufacturing, healthcare, logistics, operational, and professional recruitment.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#expertise">View My Expertise →</a>
+            <a class="button button-secondary" href="Moncina_T_James_Talent_Acquisition_Manager_Resume%209_4_26.pdf" download>↓ Download My Resume</a>
+          </div>
+        </div>
+        <div class="image-frame">
+          <img src="create_a_professional_presen.png" alt="Illustrated career pathways leading toward professional opportunities, recruiting partnerships, and organizational growth">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container two-column">
+        <div class="image-frame">
+          <img src="create_a_polished_presentati.png" alt="Illustration representing recruiting across corporate, technical, manufacturing, and global work environments" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">Short Bio</p>
+          <h2>Recruiting with purpose and precision.</h2>
+          <p class="lead">Moncina T. James is a Talent Acquisition professional with 15+ years of experience recruiting across manufacturing, skilled trades, industrial operations, supply chain, logistics, healthcare, and corporate functions. Moncina specializes in full-cycle recruiting, passive sourcing, high-volume hiring, stakeholder partnership, and building strong talent pipelines for specialized and hard-to-fill roles. Moncina is known for responsiveness, an organized approach, and a commitment to creating a positive experience for candidates and hiring teams.</p>
+          <div class="value-grid">
+            <div class="value-card"><span class="icon">◎</span><span>Candidate-first communication</span></div>
+            <div class="value-card"><span class="icon">◇</span><span>Business-focused strategy</span></div>
+            <div class="value-card"><span class="icon">✓</span><span>Consistent follow-through</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="section expertise">
+      <div class="container">
+        <div class="expertise-top">
+          <div>
+            <p class="eyebrow">Recruiting Expertise</p>
+            <h2>Roles and industries I understand.</h2>
+            <p class="lead">Broad recruiting experience across the talent areas that keep organizations operating, producing, growing, and serving customers.</p>
+            <div class="chips" aria-label="Recruiting specialties">
+              <span class="chip">Skilled Trades</span><span class="chip">Manufacturing</span><span class="chip">Engineering-Adjacent Roles</span><span class="chip">Industrial Operations</span><span class="chip">Healthcare</span><span class="chip">Logistics &amp; Transportation</span><span class="chip">Corporate &amp; Professional</span><span class="chip">High-Volume Recruiting</span>
+            </div>
+          </div>
+          <div class="image-frame">
+            <img src="Create%20a%20polished%20growth%20roadmap%20visual%20for%20a%20smal.png" alt="Illustrated growth roadmap showing recruiting, career development, partnerships, technology, and results" loading="lazy">
+          </div>
+        </div>
+        <div class="role-grid">
+          <article class="role-card">
+            <span class="icon">⚙</span><h3>Technical &amp; Skilled Trades</h3>
+            <ul><li>HVAC &amp; Refrigeration Technicians</li><li>Industrial Electricians</li><li>Industrial Maintenance Technicians</li><li>I&amp;C Technicians</li><li>Field Service Technicians</li><li>Millwrights</li><li>Pipefitters</li><li>Welders</li><li>Fabricators</li><li>Industrial Painters</li></ul>
+          </article>
+          <article class="role-card">
+            <span class="icon">▣</span><h3>Operations &amp; Logistics</h3>
+            <ul><li>Machine Operators</li><li>Forklift Operators</li><li>Turret Truck Operators</li><li>Scissor Lift Operators</li><li>Material Handlers</li><li>CDL Class A-C Drivers</li><li>Planners/Schedulers</li><li>Logistics Managers</li></ul>
+          </article>
+          <article class="role-card">
+            <span class="icon">✓</span><h3>Quality &amp; Leadership</h3>
+            <ul><li>Quality Technicians</li><li>Quality Leads</li><li>Food Safety &amp; Quality Managers</li><li>Maintenance Managers</li><li>Operations Managers</li><li>Plant Managers</li><li>Manufacturing Finance Professionals</li><li>Cost Accounting Professionals</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section workflow">
+      <div class="container">
+        <div class="workflow-top">
+          <div><p class="eyebrow">My Workflow</p><h2>From the first intake to the accepted offer.</h2><p class="lead">A structured process, clear communication, and proactive follow-up keep every search moving forward.</p></div>
+          <div class="image-frame"><img src="Create%20a%20presentation%20visual%20for%20HR%20consulting%20and.png" alt="Stakeholders collaborating around a table during workforce planning and candidate review" loading="lazy"></div>
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-card"><span class="workflow-number">01</span><h3>Intake &amp; Strategy</h3><p>Partner with hiring managers to clarify business needs, job requirements, priorities, timelines, and candidate profiles.</p></article>
+          <article class="workflow-card"><span class="workflow-number">02</span><h3>Sourcing &amp; Pipeline Development</h3><p>Build targeted sourcing strategies, engage passive talent, review applicants, and maintain pipelines for current and future needs.</p></article>
+          <article class="workflow-card"><span class="workflow-number">03</span><h3>Screening &amp; Selection</h3><p>Conduct candidate screens, assess skills and alignment, prepare qualified submissions, and coordinate interviews.</p></article>
+          <article class="workflow-card"><span class="workflow-number">04</span><h3>Offer &amp; Follow-Through</h3><p>Support selection decisions, extend and negotiate offers, coordinate pre-employment steps, and maintain communication through onboarding.</p></article>
+        </div>
+        <div class="sourcing-panel">
+          <div class="image-frame"><img src="create_a_modern_visual_for_a.png" alt="Digital candidate screening, sourcing technology, talent funnel, and applicant profiles" loading="lazy"></div>
+          <div><p class="eyebrow">Sourcing &amp; Pipeline Development</p><h3>Targeted outreach supported by organized recruiting technology.</h3><p>I build proactive pipelines, identify qualified passive talent, evaluate candidate alignment, and maintain accurate recruiting activity so hiring teams can make informed decisions.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience">
+      <div class="container">
+        <p class="eyebrow">Selected Experience</p><h2>Experience across complex hiring environments.</h2>
+        <div class="timeline">
+          <article class="timeline-item"><div class="period">2022–2025</div><div><h3>Kellanova</h3><div class="role">Global Talent Acquisition Partner</div></div><p>Supported complex recruitment across manufacturing and corporate functions in the United States, Canada, and Mexico. Consistently met service expectations and earned strong stakeholder feedback.</p></article>
+          <article class="timeline-item"><div class="period">2025</div><div><h3>ManpowerGroup supporting Bosch</h3><div class="role">RPO Recruiter Consultant</div></div><p>Provided recruiting support in a fast-paced RPO environment serving manufacturing and technical talent needs.</p></article>
+          <article class="timeline-item"><div class="period">2018–2022</div><div><h3>Healthcare &amp; Staffing Organizations</h3><div class="role">Senior Recruiting and Staffing Roles</div></div><p>Recruited clinical, healthcare, operational, and high-volume talent while managing candidate relationships and client expectations.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-card">
+        <div><p class="eyebrow">Let’s Connect</p><h2>Looking for a recruiter who understands people and operations?</h2><p>I am open to discussing recruiting, sourcing, talent acquisition, and project-based opportunities.</p></div>
+        <div class="contact-links">
+          <a class="contact-link light" href="mailto:moncina.james@gmail.com">✉ moncina.james@gmail.com</a>
+          <a class="contact-link" href="tel:+19842199271">☎ (984) 219-9271</a>
+          <a class="contact-link gold" href="Moncina_T_James_Talent_Acquisition_Manager_Resume%209_4_26.pdf" download>↓ Download My Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Moncina T. James • Talent Acquisition &amp; Recruiting Portfolio</footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const mobileNavigation = document.querySelector('.mobile-nav');
+    menuButton.addEventListener('click', () => {
+      const isOpen = mobileNavigation.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.textContent = isOpen ? '×' : '☰';
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+    mobileNavigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileNavigation.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = '☰';
+    }));
+  </script>
+</body>
+</html>
